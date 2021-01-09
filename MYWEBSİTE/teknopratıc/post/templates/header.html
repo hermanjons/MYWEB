@@ -1,0 +1,76 @@
+<html>
+<style>
+
+.w3-bar .w3-button {
+  padding: 21px;
+}
+</style>
+
+<div class="w3-top">
+  <div class="w3-bar w3-green w3-card" id="myNavbar">
+    <a href="{%  url 'home'  %}" class="w3-bar-item w3-button w3-wide"><div class="w3-cursive w3-large" ><b>TeknoPratic</b></div></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+
+  
+      <form class=" w3-margin-top  navbar-form navbar-left " role="search" method="GET" action="{% url 'index' %}">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="q" placeholder="VAR MI Bİ SORUN" value="{{request.GET.q}}" >
+                    <span class="input-group-btn">
+                        <input class="btn btn-default" type="submit" value="Ara">
+                    </span>
+                </div>
+      </form> 
+
+    
+      <a href="{% url 'home'  %}" class="w3-bar-item w3-button"><i class="fa fa-home w3-large"></i> ANASAYFA</a>
+      <a href="{% url 'indexphone'  %}" class="w3-bar-item w3-button"><i class="fa fa-tablet" aria-hidden="true"></i> TELEFON</a>
+      <a href="{% url 'index'  %}" class="w3-bar-item w3-button"><i class="fa fa-th"></i> BLOG</a>
+    <a href="{% url 'indexcomp'  %}" class="w3-bar-item w3-button"><i class="fa fa-desktop" aria-hidden="true"></i>  BİLGİSAYAR</a>
+      
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- küçük ekranlarda sidebar-->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Kapat ×</a>
+    <form class=" w3-margin-top  navbar-form navbar-left " role="search" method="GET" action="{% url 'index' %}">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="q" placeholder="Sorununu Ara" value="{{request.GET.q}}" >
+                    <span class="input-group-btn">
+                        <input class="btn btn-default" type="submit" value="Ara">
+                    </span>
+                </div>
+      </form> 
+  
+  <a href="{% url 'home' %}" onclick="w3_close()" class="w3-bar-item w3-button">ANASAYFA</a>
+  <a href="{% url 'index' %}" onclick="w3_close()" class="w3-bar-item w3-button">BLOG</a>
+ 
+  <a href="{% url 'indexcomp' %}" onclick="w3_close()" class="w3-bar-item w3-button">BİLGİSAYAR</a>
+  <a href="{% url 'indexphone' %}" onclick="w3_close()" class="w3-bar-item w3-button">TELEFON</a>
+
+ 
+</nav>
+<script>
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// SideBarımızı kapatır
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+</html>
