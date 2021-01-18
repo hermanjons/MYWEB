@@ -1,0 +1,164 @@
+
+<html>
+
+<head>
+
+
+
+</head>
+
+      {% extends 'base.html' %}
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% block body  %}
+
+<div class="w3-content"style="max-width:1600px" >
+<div class="w3-container" >
+     
+     
+    
+
+<div class="w3-row-padding">
+  <div class="col-md-6 w3-margin-bottom w3-margin-top col-md-offset-3  w3-border w3-border-green w3-round-xxlarge ">
+    <div class="w3-panel w3-red w3-center w3-round" ><h3><b>{{post.title|safe}}</b></h3></div>
+    <img class="w3-round-xxlarge w3-margin-top w3-border  w3-border-green" src="{{post.imgfield.url}} "alt="Görsel" style="width:100%">
+    <div class="w3-sans-serif w3-large" ><p  >{{post.text1|safe|linebreaks}}</p></div>
+
+
+{% if post.step1 %}
+<div class="w3-panel w3-green  w3-round-xxlarge " ><h3>  <b>{{post.step1}}</b></h3></div>
+{% endif %}
+{% if post.imgfield2 %}
+<img class="w3-round-xxlarge w3-margin-top w3-border w3-border-green" src="{{post.imgfield2.url}} "alt="Görsel" style="width:100%">
+{% endif %}
+{% if post.text2 %}
+<div class="w3-sans-serif w3-large w3-margin-left" ><p>{{post.text2|safe|linebreaks}}</p></div>
+{% endif %}
+{% if post.step2 %}
+
+<div class="w3-panel  w3-green w3-round-xxlarge">
+   <h3><b>{{post.step2}}</b></h3>
+</div>
+
+{% endif %}
+
+{% if post.imgfield3 %}
+    <img class="w3-round-xxlarge w3-margin-top w3-border w3-border-green " src="{{post.imgfield3.url}} "alt="Görsel" style="width:100%">
+    {% endif %}
+
+{% if post.text3 %}
+    <p>{{post.text3|safe|linebreaks}}</p>
+
+{% endif %}
+
+
+{% if post.step3 %}
+
+<div class="w3-panel  w3-green w3-round-xxlarge">
+   <h3><b>{{post.step3}}</b></h3>
+</div>
+{% endif %}
+{% if post.imgfield3 %}   
+    <img class="w3-round-xxlarge w3-margin-top w3-border w3-border-green " src="{{post.imgfield3.url}} "alt="Görsel" style="width:100%">
+    
+{% endif %}
+{% if post.text4 %}  
+    <p>{{post.text4|safe|linebreaks}}</p>
+
+
+{% endif %}
+
+{% if post.step4 %}
+
+<div class="w3-panel  w3-green w3-round-xxlarge">
+   <h3><b>{{post.step4}}</b></h3>
+</div>
+
+   
+    <img class="w3-round-xxlarge w3-margin-top w3-border w3-border-green " src="{{post.imgfield3.url}} "alt="Görsel" style="width:100%">
+    
+
+    <p>{{post.text5|safe|linebreaks}}</p>
+
+
+{% endif %}
+
+
+{% if post.step5 %}
+
+<div class="w3-panel  w3-green w3-round-xxlarge">
+   <h3><b>{{post.step5}}</b></h3>
+</div>
+
+   
+    <img class="w3-round-xxlarge w3-margin-top w3-border w3-border-green " src="{{post.imgfield3.url}} "alt="Görsel" style="width:100%">
+    
+
+    <p>{{post.text6|safe|linebreaks}}</p>
+
+
+{% endif %}
+
+
+
+
+
+
+
+
+    
+    
+  </div>
+  
+</div>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+        
+
+
+
+{% endblock  %}
+
+
+ </body>  
+
+ </html>   

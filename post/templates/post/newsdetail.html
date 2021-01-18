@@ -1,0 +1,91 @@
+<html>
+
+<head>
+
+
+
+</head>
+
+      {% extends 'base.html' %}
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% block body  %}
+
+<div class="w3-content"style="max-width:1600px" >
+<div class="w3-container" >
+     
+     
+    
+
+<div class="w3-row-padding">
+
+
+  <div class="col-md-6 w3-margin-bottom w3-margin-top col-md-offset-3  w3-border w3-border-black  ">
+
+    <div class="w3-panel w3-black w3-center w3-round" ><h3><b>{{news.Başlık|safe}}</b></h3></div>
+     {% if news.resim %}
+    <img class=" w3-margin-top w3-border  w3-border-blue" src="{{news.resim.url}} "alt="Görsel" style="width:100%">
+    {% endif %}
+    <div class="w3-sans-serif w3-large" ><p  >{{news.metin|safe|linebreaks}}</p></div>
+    {% if news.resim2 %}
+    <img class=" w3-margin-bottom w3-margin-top w3-border  w3-border-blue" src="{{news.resim2.url}} "alt="Görsel" style="width:100%">
+   
+    {% endif %}
+    
+
+
+    
+  </div>
+  
+</div>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+        
+
+
+
+{% endblock  %}
+
+
+ </body>  
+
+ </html>   

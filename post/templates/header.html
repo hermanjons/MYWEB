@@ -1,0 +1,144 @@
+<html>
+<style>
+
+.w3-bar .w3-button {
+  padding: 21px;
+}
+</style>
+
+<div class="w3-top">
+  <div class="w3-bar w3-green w3-card" id="myNavbar">
+    <a href="{%  url 'home'  %}" class="w3-bar-item w3-button w3-wide"><div class="w3-cursive w3-large" ><b>TeknoPratic</b></div></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+
+  
+  
+
+    
+    <a href="{% url 'home'  %}" class="w3-bar-item w3-button"><i class="fa fa-home w3-xlarge"></i> ANASAYFA</a>
+
+    <div class="w3-dropdown-hover">
+      <a href="{% url 'index'  %}" class="w3-button "><i class="fa fa-th w3-xlarge"></i>   BLOG</a>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-green">
+        <a href="{%url 'indexphone'%}" class="w3-bar-item w3-button"><i class="fa fa-mobile w3-xxlarge"></i> TELEFON</a>
+        <a href="{%url 'indexcomp' %}" class="w3-bar-item w3-button"><i class="fa fa-desktop w3-xlarge"></i> BİLGİSAYAR</a>
+        
+      </div>
+    </div>
+        <div class="w3-dropdown-hover">
+      <a href="{% url 'newsindex'  %}" class="w3-button "><i class="fa fa-newspaper-o w3-xlarge" aria-hidden="true"></i>  TEKNO-HABER</a>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-black">
+        <a href="{%url 'newsphone'%}" class="w3-bar-item w3-button"><i class="fa fa-mobile w3-xxlarge"></i> TELEFON</a>
+        <a href="{%url 'newscomp' %}" class="w3-bar-item w3-button"><i class="fa fa-desktop w3-xlarge"></i> BİLGİSAYAR</a>
+        
+      </div>
+    </div>
+
+
+    <form class=" w3-margin-top  navbar-form navbar-left " role="search" method="GET" action="{% url 'index' %}">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="q" placeholder="VAR MI Bİ SORUN" value="{{request.GET.q}}" >
+                    <span class="input-group-btn">
+                        <input class="btn btn-default" type="submit" value="Ara">
+                    </span>
+                </div>
+      </form> 
+    
+      
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+    <form class=" w3-margin-bottom  navbar-form navbar-left w3-hide-large w3-hide-medium  " role="search" method="GET" action="{% url 'index' %}">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="q" placeholder="arat!" value="{{request.GET.q}}" >
+                    <span class="input-group-btn">
+                        <input class="btn btn-default" type="submit" value="Ara">
+                    </span>
+                </div>
+      </form> 
+  </div>
+</div>
+
+<!-- küçük ekranlarda sidebar-->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+ <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large"><i class="fa fa-window-close" aria-hidden="true"></i>  Kapat</a>
+<a href="{% url 'home'  %}" class="w3-bar-item w3-button"><i class="fa fa-home w3-xlarge"></i> ANASAYFA</a>
+
+      
+<div class="w3-container">
+
+
+<button onclick="myFunction('Demo1')" class="w3-button  w3-block w3-black w3-left-align">
+  <i class="fa fa-newspaper-o w3-xlarge" aria-hidden="true"></i>    TEKNO-HABER</button>
+
+<div id="Demo1" class="w3-hide">
+  <a class="w3-button w3-block w3-left-align" href="{%url 'newsphone' %}"><i class="fa fa-mobile w3-xxlarge"></i>  TELEFON</a>
+  <a class="w3-button w3-block w3-left-align" href="{%url 'newscomp'%}"><i class="fa fa-desktop w3-large"></i> BİLGİSAYAR</a>
+  
+</div>
+
+</div>
+
+<div class="w3-container">
+
+
+<button onclick="myFunction('Demo2')" class="w3-button w3-block w3-black w3-left-align">
+  <i class="fa fa-th w3-xlarge" aria-hidden="true"></i>    BLOG</button>
+
+<div id="Demo2" class="w3-hide w3-green">
+  <a class="w3-button w3-block w3-left-align" href="{%url 'indexphone' %}"><i class="fa fa-mobile w3-xxlarge"></i>TELEFON</a>
+  <a class="w3-button w3-block w3-left-align" href="{%url 'indexcomp'%}"><i class="fa fa-desktop w3-xlarge"></i> BİLGİSAYAR</a>
+  
+</div>
+
+</div>
+
+
+
+ 
+  
+
+
+
+</nav>
+
+
+
+
+
+
+<script>
+
+
+
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+
+
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// SideBarımızı kapatır
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+</html>
