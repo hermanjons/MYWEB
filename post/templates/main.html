@@ -19,7 +19,7 @@
   <!-- Blog entry -->
   <div class="w3-card-4 w3-margin w3-black w3-padding-32">
     <div class="w3-container w3-center ">
-      <h3><b>|GÜNÜN BİLGİSİ|</b></h3>
+      <h3><b>|INFORMATION OF THE DAY|</b></h3>
       
     </div>
     
@@ -47,9 +47,9 @@
     
     </div>
     <p><b>{{post.genre}}</b> </p>
-    <p><small>{{post.publishing_date|timesince}} <b>önce</b></small></p>
+    <p><small>{{post.publishing_date|timesince}} <b>since</b></small></p>
     <p>{{post.text|safe|linebreaks|truncatechars:150}}</p>
-    <p><a href="{{post.get_absolute_url}}"> <button class="w3-button w3-round w3-green w3-block">ÇÖZÜM</button> </a></p>
+    <p><a href="{{post.get_absolute_url}}"> <button class="w3-button w3-round w3-blue w3-block">READ</button> </a></p>
   </div>
   
   
@@ -64,7 +64,7 @@
   <div class="w3-card-4 w3-margin w3-margin-top w3-black">
  
     <div class="w3-container w3-center ">
-      <h4><b>|GÜNÜN SÖZÜ|</b></h4>
+      <h4><b>|WORD OF THE DAY|</b></h4>
     </div>
     <div class="w3-container">  
       <p>{{sozofday.quoteday}} ({{sozofday.quoteown}})</p>
@@ -75,7 +75,7 @@
   <!-- Posts -->
   <div class="w3-card w3-margin">
     <div class="w3-container w3-padding">
-      <h4>ÇÖZÜMCÜLER</h4>
+      <h4>STUDENT</h4>
     </div>
     <ul class="w3-ul w3-hoverable w3-white">
     {% for users in user  %}

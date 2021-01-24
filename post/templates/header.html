@@ -7,8 +7,8 @@
 </style>
 
 <div class="w3-top">
-  <div class="w3-bar w3-green w3-card" id="myNavbar">
-    <a href="{%  url 'home'  %}" class="w3-bar-item w3-button w3-wide"><div class="w3-cursive w3-large" ><b>TeknoPratic</b></div></a>
+  <div class="w3-bar w3-indigo w3-card" id="myNavbar">
+    <a href="{%  url 'home'  %}" class="w3-bar-item w3-button w3-wide"><div class="w3-cursive w3-large" ><b>SCİENTİSTS</b></div></a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
 
@@ -16,31 +16,17 @@
   
 
     
-    <a href="{% url 'home'  %}" class="w3-bar-item w3-button"><i class="fa fa-home w3-xlarge"></i> ANASAYFA</a>
+    <a href="{% url 'home'  %}" class="w3-bar-item w3-button"><i class="fa fa-home w3-xlarge"></i> MAİNPAGE</a>
 
-    <div class="w3-dropdown-hover">
-      <a href="{% url 'index'  %}" class="w3-button "><i class="fa fa-th w3-xlarge"></i>   BLOG</a>
-      <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-green">
-        <a href="{%url 'indexphone'%}" class="w3-bar-item w3-button"><i class="fa fa-mobile w3-xxlarge"></i> TELEFON</a>
-        <a href="{%url 'indexcomp' %}" class="w3-bar-item w3-button"><i class="fa fa-desktop w3-xlarge"></i> BİLGİSAYAR</a>
-        
-      </div>
-    </div>
-        <div class="w3-dropdown-hover">
-      <a href="{% url 'newsindex'  %}" class="w3-button "><i class="fa fa-newspaper-o w3-xlarge" aria-hidden="true"></i>  TEKNO-HABER</a>
-      <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-black">
-        <a href="{%url 'newsphone'%}" class="w3-bar-item w3-button"><i class="fa fa-mobile w3-xxlarge"></i> TELEFON</a>
-        <a href="{%url 'newscomp' %}" class="w3-bar-item w3-button"><i class="fa fa-desktop w3-xlarge"></i> BİLGİSAYAR</a>
-        
-      </div>
-    </div>
+    
+      
 
 
     <form class=" w3-margin-top  navbar-form navbar-left " role="search" method="GET" action="{% url 'index' %}">
                 <div class="input-group">
-                    <input class="form-control" type="text" name="q" placeholder="VAR MI Bİ SORUN" value="{{request.GET.q}}" >
+                    <input class="form-control" type="text" name="q" placeholder="WHAT'S YOUR PROBLEM" value="{{request.GET.q}}" >
                     <span class="input-group-btn">
-                        <input class="btn btn-default" type="submit" value="Ara">
+                        <input class="btn btn-default" type="submit" value="SEARCH">
                     </span>
                 </div>
       </form> 
