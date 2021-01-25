@@ -51,8 +51,7 @@ class Post(models.Model):
     text3=RichTextField(verbose_name="metin 3",blank=True)
     step3=models.CharField(max_length=120,verbose_name="adım 3",blank=True)
     imgfield3=models.ImageField(verbose_name="Resim alanı 3",blank=True)
-    text4=RichTextField(verbose_name="metin 4")
-
+    text4=RichTextField(verbose_name="metin 4",blank=True)
     step4=models.CharField(max_length=120,verbose_name="adım 4",blank=True)
     imgfield4=models.ImageField(verbose_name="Resim alanı 4",blank=True)
     text5=RichTextField(verbose_name="metin 5",blank=True)

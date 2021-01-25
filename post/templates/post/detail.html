@@ -46,8 +46,8 @@
 {% if post.step1 %}
 <div class="w3-panel w3-green  w3-round-xxlarge " ><h3>  <b>{{post.step1}}</b></h3></div>
 {% endif %}
-{% if post.imgfield2 %}
-<img class="w3-round-xxlarge w3-margin-top w3-border w3-border-green" src="{{post.imgfield2.url}} "alt="Görsel" style="width:100%">
+{% if post.imgfield1 %}
+<img class="w3-round-xxlarge w3-margin-top w3-border w3-border-green" src="{{post.imgfield1.url}} "alt="Görsel" style="width:100%">
 {% endif %}
 {% if post.text2 %}
 <div class="w3-sans-serif w3-large w3-margin-left" ><p>{{post.text2|safe|linebreaks}}</p></div>
@@ -60,9 +60,9 @@
 
 {% endif %}
 
-{% if post.imgfield3 %}
-    <img class="w3-round-xxlarge w3-margin-top w3-border w3-border-green " src="{{post.imgfield3.url}} "alt="Görsel" style="width:100%">
-    {% endif %}
+{% if post.imgfield2 %}
+    <img class="w3-round-xxlarge w3-margin-top w3-border w3-border-green " src="{{post.imgfield2.url}} "alt="Görsel" style="width:100%">
+{% endif %}
 
 {% if post.text3 %}
     <p>{{post.text3|safe|linebreaks}}</p>
@@ -91,15 +91,24 @@
 <div class="w3-panel  w3-green w3-round-xxlarge">
    <h3><b>{{post.step4}}</b></h3>
 </div>
+{% endif %}
+{% if post.imgfield4  %}
 
-   
-    <img class="w3-round-xxlarge w3-margin-top w3-border w3-border-green " src="{{post.imgfield3.url}} "alt="Görsel" style="width:100%">
+ 
+<img class="w3-round-xxlarge w3-margin-top w3-border w3-border-green " src="{{post.imgfield4.url}} "alt="Görsel" style="width:100%">
     
+{% endif %}
 
-    <p>{{post.text5|safe|linebreaks}}</p>
 
+{% if post.text5 %}
+
+
+
+
+<p>{{post.text5|safe|linebreaks}}</p>
 
 {% endif %}
+
 
 
 {% if post.step5 %}
@@ -108,9 +117,17 @@
    <h3><b>{{post.step5}}</b></h3>
 </div>
 
+{% endif %}
+{% if post.imgfield5  %}
    
-    <img class="w3-round-xxlarge w3-margin-top w3-border w3-border-green " src="{{post.imgfield3.url}} "alt="Görsel" style="width:100%">
+   
+  
+    <img class="w3-round-xxlarge w3-margin-top w3-border w3-border-green " src="{{post.imgfield5.url}} "alt="Görsel" style="width:100%">
     
+{% endif %}
+
+{% if post.text6 %}
+ 
 
     <p>{{post.text6|safe|linebreaks}}</p>
 

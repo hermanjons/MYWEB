@@ -60,6 +60,9 @@ admin.site.register(Quote,soz)
 admin.site.register(Infoabouttek,infotek)
 
 
+admin.site.register(Users,User)
+
+
 
 
 
